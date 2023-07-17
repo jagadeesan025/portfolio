@@ -1,0 +1,146 @@
+
+<app-navbar></app-navbar>
+<div style="background-image: url('/assets/ck.avif'); padding-bottom: 30px;">
+<div class="container" ><div style="padding-top: 30px; margin-bottom: 30px; ">
+<br><br>
+  <br><br>
+<div class="card dd" style="border-color: rgb(255, 0, 0);">
+  <div class="card-header" style="text-transform: capitalize;font-size: larger;text-align: center;background-color: rgb(165, 101, 254);">
+    <b style="font-size: 30px;">new user</b>
+  </div>
+
+
+    <div class="card-body bd">
+
+
+     <form class="row" name="form"[formGroup]="f">
+
+        <div class="row " style="padding-bottom: 50px;">
+          <div class="col">
+
+            <div>
+              <select type="text" formControlName="title" class="form-control  me" placeholder="title"
+                [ngClass]="{' is-invalid': submitted && f.controls['title'].invalid}" required="">
+                <option > </option>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+                <option value="Ms">Ms</option>
+</select>
+              <div *ngIf="submitted && f.controls['title'].invalid" class="invalid-feedback  me">
+                <div *ngIf="f.controls['title'].errors required" style="font-size: smaller;">Title Required</div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group col-5 me">
+
+            <input type="text" formControlName="firstName" class="form-control  me" placeholder="firstName"
+              [ngClass]="{ 'is-invalid': submitted && f.controls['firstName'].invalid }" required>
+            <div *ngIf="submitted && f.controls['firstName'].invalid" class="invalid-feedback">
+              <div *ngIf="f.controls['firstName'].errors required">First Name is required</div>
+            </div>
+          </div>
+
+
+          <div class="form-group col-5 me ">
+
+            <input type="text" formControlName="lastName" class="form-control  me" placeholder="lastName"
+              [ngClass]="{'is-invalid': submitted && f.controls['lastName'].invalid}" required>
+            <div *ngIf="submitted&&f.controls['lastName'].invalid" class="invalid-feedback">
+              <div *ngIf="f.controls['lastName'].errors required">Lastname required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row "style="padding-bottom: 40px;">
+          <div class="col-3">
+
+            <input type="date" formControlName="dob" class="form-control  me" placeholder="Date of Birth"
+              [ngClass]="{ 'is-invalid': submitted && f.controls['dob'].invalid }" required>
+            <div *ngIf="submitted && f.controls['dob'].invalid" class="invalid-feedback">
+              <div *ngIf="f.controls['dob'].errors required">Date of Birth is required</div>
+            </div>
+          </div>
+
+
+          <div class="col-3 ">
+
+            <select class="form-select me" formControlName="state" name="state"
+              [ngClass]="{'is-invalid':submitted && f.controls['state'].invalid}" required>
+              <option value="" disabled selected hidden>State</option>
+
+              <option>Tamil Nadu</option>
+            </select>
+            <div *ngIf="submitted && f.controls['state'].invalid" class="invalid-feedback">
+              <div *ngIf="f.controls['state'].errors required">State required</div>
+            </div>
+          </div>
+
+          <div class="col-3">
+
+            <select class="form-select  me" formControlName="city" formControlName="city" placeholder="city"
+              [ngClass]="{'is-invalid':submitted&&f.controls['city'].invalid}" required>
+              <option value="" disabled selected hidden>City</option>
+              <option>Chennai</option>
+              <option> Coimbatore</option>
+              <option>Madurai</option>
+              <option> Salem</option>
+              <option>Tiruppur</option>
+            </select>
+            <div *ngIf="submitted && f.controls['city'].invalid" class="invalid-feedback">
+              <div *ngIf="f.controls['city'].errors required">City required</div>
+            </div>
+          </div>
+
+
+          <div class="col me">
+
+            <input type="text" class="form-control  me" formControlName="zip" placeholder="pincode"
+              [ngClass]="{'is-invalid': submitted &&f.controls['zip'].invalid }" required>
+            <div *ngIf="submitted && f.controls['zip'].invalid" class="invalid-feedback">
+              <div *ngIf="f.controls['zip'].errors required">pincode required</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row" style="padding-bottom: 20px; padding-left: 30px;" >
+
+        <label style="padding-bottom: 20px;">Gender</label>
+
+         <div class="form-check col-4" >
+            <input type="radio" class="form-check-input me" id="validationFormCheck2" name="radio-stacked"  formControlName="gender" required>
+            <label class="form-check-label" for="validationFormCheck2">Male</label>
+          </div>
+          <div class="form-check col-8" >
+            <input type="radio" class="form-check-input me" id="validationFormCheck3" name="radio-stacked" formControlName="gender" required>
+            <label class="form-check-label" for="validationFormCheck3">Female</label></div>
+            <div class="invalid-feedback">More example invalid feedback text</div>
+             <div *ngIf="submitted && f.controls['gender'].invalid" class="invalid-feedback">
+              <div *ngIf="f.controls['gender'].errors required">Agreement required</div>
+
+          </div></div>
+
+     <div class="row"style="padding-bottom: 10px; padding-left: 30px;">
+        <div class="col-12 me">
+          <div class="form-check">
+            <input class="form-check-input me" type="checkbox" formControlName="agree"
+              [ngClass]=" {'is-invalid' :submitted && f.controls['agree'].invalid}" required>
+            <label>
+              Agree to terms and conditions
+            </label>
+            <div *ngIf="submitted && f.controls['agree'].invalid" class="invalid-feedback">
+              <div *ngIf="f.controls['agree'].errors required">Agreement required</div>
+            </div></div>
+          </div>
+        </div>
+        <div class="col-12" style="text-align: center;">
+          <button class="btn btn-primary " style="padding: 10px 20px 10px 20px;" type="submit" (click)="submit()">register </button>
+        </div>
+      </form>
+    </div></div>
+  </div></div>
+</div>
+

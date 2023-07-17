@@ -1,0 +1,275 @@
+/*Font setup*/
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Raleway"), local("Raleway-Regular"), url("https://fonts.gstatic.com/s/raleway/v11/yQiAaD56cjx1AooMTSghGfY6323mHUZFJMgTvxaG2iE.woff2") format("woff2");
+  unicode-range: U+100-24F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Raleway"), local("Raleway-Regular"), url("https://fonts.gstatic.com/s/raleway/v11/0dTEPzkLWceF7z0koJaX1A.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Raleway Bold"), local("Raleway-Bold"), url("https://fonts.gstatic.com/s/raleway/v11/WmVKXVcOuffP_qmCpFuyzSEAvth_LlrfE80CYdSH47w.woff2") format("woff2");
+  unicode-range: U+100-24F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Raleway Bold"), local("Raleway-Bold"), url("https://fonts.gstatic.com/s/raleway/v11/JbtMzqLaYbbbCL9X6EvaI_k_vArhqVIZ0nv9q090hN8.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+/*Basic <body> settings*/
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0 -15px;
+}
+
+body a {
+  color: #00a3df;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+
+/*Hides the nickname label and text-field*/
+
+.hidden {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.375rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p,
+li {
+  font-size: 1.15em;
+  line-height: 1.75em;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 1.6rem 0;
+}
+
+
+/*Start of <body> specific styling*/
+
+header {
+  background-color: #000000;
+  color: #fff;
+}
+
+header .nav,
+.social {
+  text-align: center;
+  border-bottom: 2px solid #fff;
+}
+
+header .nav {
+  background-color: #000000;
+}
+
+header .social {
+  display: block;
+  padding: 0 0 50px 0;
+}
+
+header .nav li,
+.social li {
+  display: inline-block;
+  padding: 0 25px;
+}
+
+header .nav li a,
+.social li a {
+  color: #fff;
+  font-weight: bold;
+}
+
+header .nav li a:hover,
+.social li a:hover {
+  color: #4dc4d3;
+  text-decoration: none;
+}
+
+header #front {
+  margin: auto;
+  padding: 10px 0 30px 0;
+}
+
+header .social li a .fa {
+  font-size: 3.2em;
+}
+
+header .social li a .caption {
+  font-size: .9em;
+}
+
+header .social li a:hover {
+  color: #fff;
+}
+
+.content {
+  padding: 50px 0;
+  width: auto;
+  margin: auto;
+}
+
+#about {
+  width: 80%;
+  margin: auto;
+}
+
+#me {
+  display: block;
+  margin: 0px auto 60px auto;
+  border: 3px solid #aaa;
+  border-radius: 50%;
+}
+
+#projects,
+#contact {
+  background-color: #4dc4d3;
+}
+
+#projects .img-frame {
+  width: 70%;
+  margin: auto;
+  padding: 40px 0 0 0;
+}
+
+#projects .img-frame h2 {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#projects .img-frame .row {
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+#projects .img-frame .row .project {
+  padding-bottom: 30px;
+}
+
+#projects .img-frame .row a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+#projects .img-frame .row a:hover {
+  font-weight: bold;
+}
+
+#projects .img-frame .row a .caption {
+  text-decoration: none;
+  padding-top: 15px;
+}
+
+#projects .img-frame .img-thumbnail {
+  width: 275px;
+  height: 160px;
+  overflow: auto;
+}
+
+#projects h3 {
+  text-align: center;
+  color: #fff;
+  padding-bottom: 50px;
+}
+
+#projects h3 a {
+  color: #fff;
+  font-weight: bold;
+}
+
+
+#interests .arrows {
+  text-align: right;
+}
+
+#interests .arrows p a img {
+  width: 50px;
+  height: 50px;
+}
+
+#contact {
+  margin: auto;
+  text-align: center;
+}
+
+#contact .form-frame {
+  width: 100%;
+  padding: 30px 0;
+}
+
+#contact .form-frame h2 {
+  color: #fff;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+#contact .form-frame #contact_form label {
+  text-align: left;
+  color: #fff;
+  padding-top: 10px;
+}

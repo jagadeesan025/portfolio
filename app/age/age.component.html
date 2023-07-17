@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-4"> <h1 style="padding-top: 70px; padding-left: 30px;">What is your age ?</h1>
+    <h2 style="text-align: center;">⏳</h2>
+    <br><br>
+    <div class="card" style="padding: 50px 50px 100px 20px;  background-image: linear-gradient(red, yellow, green);" >
+      <input style="margin-left: 30px;" type="text" [(ngModel)]="name" />
+      <br>
+    <input style="margin-left: 30px;" type="date" [(ngModel)]="age" />
+
+    <br>
+    <button type="button" style="margin-left: 40px;margin-top: 50px;"(click)="ageCalculator()"> Calcular </button>
+    <p *ngIf="age"style="margin-left: 150px;margin-top: 100px;color:white;">hi,  {{names}}</p>
+      <p style="margin-left: 120px;margin-top: 10px;color:white;"> your age is {{ showAge }}</p></div></div>
+  <div class="col-4"></div>
+</div>
+
+<br>
+
+

@@ -1,0 +1,94 @@
+ <div class="row"><app-navbar></app-navbar></div>
+  <div class="row"><div style="background-image: url(/assets/np.avif);padding-bottom: 73px;padding-top: 10px;">
+<div style="background-image: url(/assets/np.avif);padding-bottom: 73px;padding-top: 10px;">
+  <br><br><br><br>
+  <div class="container"><div class="card m-3">
+
+  <h5 class="card-header text-center" style="font-size: 30px; color: rgb(0, 0, 0);background-color: rgb(180, 173, 173); ">Creat new account</h5>
+
+  <div class="card-body">
+
+      <form #f="ngForm">
+
+          <br><div class="row  ">
+              <div class="col-2 md-12">
+
+                  <select name="title" ngModel #title="ngModel" class="form-control"placeholder="Title" [ngClass]="{ 'is-invalid': f.submitted && title.invalid }" required >
+                      <option value=""></option>
+                      <option value="Mr">Mr</option>
+                      <option value="Mrs">Mrs</option>
+                      <option value="Miss">Miss</option>
+                      <option value="Ms">Ms</option>
+                  </select>
+                  <div *ngIf="f.submitted && title.errors" class="invalid-feedback">
+                    <div *ngIf="f.controls['title'].invalid" >Title is required</div>
+                  </div>
+              </div>
+
+              <div class="col-5 md-12">
+
+                  <input type="text" name="firstName" ngModel #firstName="ngModel" class="form-control" placeholder="First name" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required>
+                  <div *ngIf="f.submitted && firstName.errors" class="invalid-feedback">
+                    <div *ngIf="f.controls['firstName'].invalid">first name is required</div>
+                  </div>
+              </div>
+              <div class="col-5 mb-12">
+
+                  <input type="text" name="lastName" ngModel #lastName="ngModel" class="form-control" placeholder="Last name" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required>
+                  <div *ngIf="f.submitted && lastName.errors" class="invalid-feedback">
+                    <div *ngIf="f.controls['lastName'].invalid">last Name is required</div>
+                  </div>
+              </div>
+          </div><br>
+          <div class="row">
+              <div class="col mb-3">
+
+                  <input type="date" name="dob" ngModel #dob="ngModel" class="form-control" placeholder="Date Of Birth" [ngClass]="{ 'is-invalid': f.submitted && dob.invalid }" required pattern="^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$">
+                  <div *ngIf="f.submitted && dob.errors" class="invalid-feedback">
+                    <div *ngIf="f.controls['dob'].invalid">date of birth is required</div>
+                      <div *ngIf="dob.errors required">Date of Birth is required</div>
+                      <div *ngIf="dob.errors required pattern">Date of Birth must be a valid date in the format YYYY-MM-DD</div>
+                  </div>
+              </div>
+              <div class="col mb-3">
+
+                  <input type="text" name="email" ngModel #email="ngModel" class="form-control" placeholder="Email" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email>
+                  <div *ngIf="f.submitted && email.errors" class="invalid-feedback">
+
+                      <div *ngIf="email.errors required">Email is required</div>
+                      <div *ngIf="email.errors email">Email must be a valid email address</div>
+                  </div>
+              </div>
+          </div><br>
+          <div class="row">
+              <div class="col mb-3">
+
+                  <input type="password" name="password" ngModel #password="ngModel" class="form-control" placeholder="Password" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="6">
+                  <div *ngIf="f.submitted && password.errors" class="invalid-feedback">
+                      <div *ngIf="password.errors required">Password is required</div>
+                      <div *ngIf="password.errors minlength">Password must be at least 6 characters</div>
+                  </div>
+              </div>
+              <div class="col mb-3">
+
+                  <input type="password" name="confirmPassword" ngModel #confirmPassword="ngModel" placeholder="confirm password" class="form-control" [ngClass]="{ 'is-invalid': f.submitted && confirmPassword.invalid }" required>
+                  <div *ngIf="f.submitted && confirmPassword.errors" class="invalid-feedback"><br>
+                      <div *ngIf="confirmPassword.errors required">Confirm Password is required</div>
+                      <div *ngIf="confirmPassword.errors mustMatch">Passwords must match</div>
+
+                 </div>
+              </div>
+          </div>
+          <div class="form-check mb-3">
+              <input type="checkbox" name="acceptTerms" id="acceptTerms" ngModel #acceptTerms="ngModel" class="form-check-input" [ngClass]="{ 'is-invalid': f.submitted && acceptTerms.invalid }" required>
+              <label for="acceptTerms" class="form-check-label" style="color: rgb(2, 2, 2);">Accept Terms & Conditions</label>
+              <div *ngIf="f.submitted && acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+          </div>
+          <div class="text-center">
+              <button class="btn btn-primary me-1">Register</button>
+              <button class="btn btn-secondary" type="reset">Cancel</button>
+          </div></form>
+    </div>  </div>
+</div></div>
+
+</div>

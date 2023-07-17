@@ -1,0 +1,315 @@
+/*Font setup*/
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Raleway"), local("Raleway-Regular"), url()
+
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Raleway"), local("Raleway-Regular"), url()
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Raleway Bold"), local("Raleway-Bold"), url(),}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Raleway Bold"), local("Raleway-Bold"), url()}
+
+
+
+header {
+  background-color: #000000;
+  color: #fff;
+}
+
+header
+.social {
+  text-align: center;
+  border-bottom: 2px solid #fff;
+}
+
+header .nav {
+  background-color: #000000;
+}
+
+header .social {
+  display: block;
+  padding: 0 0 50px 0;
+}
+
+header .nav li,
+.social li {
+  display: inline-block;
+  padding: 0 25px;
+}
+
+header .nav li a,
+.social li a {
+  color: #fff;
+  font-weight: bold;
+}
+
+header .nav li a:hover,
+.social li a:hover {
+  color: #4dc4d3;
+  text-decoration: none;
+}
+
+header #front {
+  margin: auto;
+  padding: 10px 0 30px 0;
+}
+
+header .social li a .fa {
+  font-size: 3.2em;
+}
+
+header .social li a .caption {
+  font-size: .9em;
+}
+
+header .social li a:hover {
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+section {
+  padding: 100px 0;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+
+
+.home .max-width {
+  width: 100%;
+  display: flex;
+}
+
+.home .max-width .row {
+  margin-right: 0;
+}
+
+.home .home-content .text-1 {
+  font-size: 27px;
+}
+
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+  color: crimson;
+  font-weight: 500;
+}
+
+
+@media (max-width: 991px) {
+  .max-width {
+      padding: 0 50px;
+  }
+
+
+@media (max-width: 690px) {
+  .max-width {
+      padding: 0 23px;
+  }
+
+  .home .home-content .text-2 {
+      font-size: 60px;
+  }
+}
+  .home .home-content .text-3 {
+      font-size: 32px;
+  }
+
+  .home .home-content a {
+      font-size: 20px;
+  }
+
+
+}
+
+@media (max-width: 500px) {
+  .home .home-content .text-2 {
+      font-size: 50px;
+  }
+
+  .home .home-content .text-3 {
+      font-size: 27px;
+  }
+
+}
+
+/* Typewriter effect 1 */
+@keyframes typing {
+
+  0.0000%, 35.3488% { content: "A"; }
+  1.1395%, 34.2093% { content: "An"; }
+  2.2791%, 33.0698% { content: "Ang"; }
+  3.4186%, 32.9302% { content: "Angu"; }
+  4.5483%, 31.9219% { content: "Angul"; }
+  5.6909%, 30.9325% { content: "Angula"; }
+  6.7386%, 29.9540% { content: "Angular"; }
+  7.8772%, 28.9756% { content: "Angular D"; }
+  9.0169%, 27.9972% { content: "Angular De"; }
+  10.1666%, 26.9987% { content: "Angular Dev"; }
+  11.2863%, 25.9903% { content: "Angular Deve"; }
+  12.3759%, 24.9818% { content: "Angular Devel"; }
+  13.4645%, 23.9733% { content: "Angular Develo"; }
+  14.5431%, 22.9863% { content: "Angular Develop"; }
+  15.6227%, 21.9863% { content: "Angular Develope"; }
+  16.6813%, 20.9878% { content: "Angular Developer"; }
+
+  37.7674%, 72.2791% { content: "F"; }
+  38.9070%, 71.1395% { content: "Fu"; }
+  39.0093%, 70.0500% { content: "Ful"; }
+  40.1197%, 69.0498% { content: "Full"; }
+  41.2372%, 68.0493% { content: "Full "; }
+  42.3548%, 67.0500% { content: "Full S"; }
+  43.4734%, 66.0507% { content: "Full St"; }
+  44.5921%, 65.0514% { content: "Full Sta"; }
+  45.7009%, 63.5517% { content: "Full Stac"; }
+  46.8195%, 62.5517% { content: "Full Stack "; }
+  47.9271%, 61.5517% { content: "Full Stack D"; }
+  48.0557%, 60.5517% { content: "Full Stack Dev"; }
+  49.1743%, 59.5518% { content: "Full Stack Deve"; }
+  50.2924%, 58.5518% { content: "Full Stack Develo"; }
+  51.4101%, 57.5519% { content: "Full Stack Develop"; }
+  52.5287%, 56.5517% { content: "Full Stack Developer"; }
+
+
+  75.2791%,100.7674%{content: ""; }
+  76.4865%, 99.9341% { content: "W"; }
+  77.6942%, 98.9930% { content: "We"; }
+  78.9018%, 97.1519% { content: "Web"; }
+  79.9995%, 96.3519% { content: "Web D"; }
+  80.1392%, 95.5519% { content: "Web De"; }
+  81.2870%, 94.7519% { content: "Web Dev"; }
+  82.4839%, 93.7519% { content: "Web Deve"; }
+  83.6126%, 92.7519% { content: "Web Devel"; }
+  84.7303%, 91.7519% { content: "Web Develo"; }
+  85.8481%, 90.7519% { content: "Web Develop"; }
+  86.9568%, 89.7519% { content: "Web Develope"; }
+  87.9654%, 88.7519% { content: "Web Developer"; }
+
+
+
+}
+
+
+@keyframes blink {
+
+  0%,
+  100% {
+      opacity: 1;
+  }
+
+  50% {
+      opacity: 0;
+  }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 15.5s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+      animation: none;
+  }
+
+  @keyframes sequencePopup {
+
+      0%,
+      100% {
+          content: "developer";
+      }
+
+      25% {
+          content: "writer";
+      }
+
+      50% {
+          content: "reader";
+      }
+
+      75% {
+          content: "human";
+      }
+  }
+
+  .typewriter::before {
+      content: "developer";
+      animation: sequencePopup 12s linear infinite;
+  }
+}
+
+
+
+
+
+

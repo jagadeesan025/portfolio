@@ -1,0 +1,155 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.nv1 {
+
+  background: rgba(185, 141, 141, 0.48);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+}
+
+.nv1 {
+  width: 30rem;
+  height: 7rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+
+}
+
+
+
+/* navbar styling */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 30px 0;
+  font-family: 'Ubuntu', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  padding: 15px 0;
+  background: crimson;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: rgb(255, 183, 0);
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .logo a span {
+  color: rgb(76, 0, 255);
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+  color: #fff;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  display: block;
+  color: rgb(0, 30, 255);
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+
+  color: rgb(255, 0, 0);
+  padding: 10px 10px 10px 10px;
+
+  padding-bottom: 30px;
+  border-radius: 10px;
+
+}
+
+
+.navbar.sticky .menu li a:hover {
+  color: #fff;
+}
+
+/* menu btn styling */
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+
+
+
+@media (max-width: 991px) {
+  .max-width {
+      padding: 0 50px;
+  }
+}
+
+@media (max-width: 947px) {
+  .menu-btn {
+      display: block;
+      z-index: 999;
+  }
+
+  .menu-btn i.active:before {
+      content: "\f00d";
+  }
+
+  .navbar .menu {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      background: #111;
+      text-align: center;
+      padding-top: 80px;
+      transition: all 0.3s ease;
+  }
+
+  .navbar .menu.active {
+      left: 0;
+  }
+
+  .navbar .menu li {
+      display: block;
+  }
+
+  .navbar .menu li a {
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 25px;
+  }
+}
+button
+{background-color: transparent;
+border-color: transparent;
+}
